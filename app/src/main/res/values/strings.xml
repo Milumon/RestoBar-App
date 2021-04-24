@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">restaurant</string>
+    <string name="subtitle_bold">Quick Action</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="username">{Username}</string>
+    <string name="recomedaciones">Recomedaciones:</string>
+    <string name="hamburguer">hamburguer</string>
+    <string name="chicken">chicken</string>
+    <string name="drink">drink</string>
+    <string name="pizza">pizza</string>
+    <string name="menu">menu</string>
+    <string name="price">$ 50</string>
+    <string name="item_name">Pasta</string>
+    <string name="item_time">40 min</string>
+    <string name="item_image">tallarin</string>
+    <string name="add_to_cart">add to cart</string>
+    <string name="Quickhamburguer">Hamburguer</string>
+    <string name="section_chicken">Chicken</string>
+    <string name="section_drink">Drink</string>
+    <string name="section_pizza">Pizza</string>
+    <string name="locales">Locales</string>
+    <string name="see_more">See More</string>
+    <string name="local">local</string>
+    <string name="larco">Larco</string>
+    <string name="_40_min">40 min</string>
+    <string name="restorbar_app">RESTORBAR APP</string>
+    <string name="la_mejor_comida_criolla_del_per">La mejor comida criolla del Perú.</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="restaurante">restaurante</string>
+</resources>
