@@ -46,4 +46,10 @@
         <item name="android:textColor">@color/red_design</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+    <style name="intro_subtitle">
+        <item name="android:fontFamily">@font/proximanovaregular</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display2</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>

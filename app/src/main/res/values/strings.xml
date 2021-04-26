@@ -23,8 +23,9 @@
     <string name="local">local</string>
     <string name="larco">Larco</string>
     <string name="_40_min">40 min</string>
-    <string name="restorbar_app">RESTORBAR APP</string>
+    <string name="restorbar_app">Eat 24 7</string>
     <string name="la_mejor_comida_criolla_del_per">La mejor comida criolla del Perú.</string>
     <string name="ingresar">Ingresar</string>
     <string name="restaurante">restaurante</string>
+    <string name="logo_store_eat_24_7">logo store eat 24 7</string>
 </resources>
