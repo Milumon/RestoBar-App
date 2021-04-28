@@ -47,7 +47,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         holder.itemName.setText(foodlist.get(position).getName());
         holder.itemPrice.setText(foodlist.get(position).getPrice());
         holder.itemTime.setText(foodlist.get(position).getTime());
- //       holder.itemRating.setRating(Float.parseFloat(foodlist.get(position).getRating()));
+        holder.itemRating.setRating(Float.parseFloat(foodlist.get(position).getRating()));
         holder.itemDescription.setText(foodlist.get(position).getDescription());
 
     }

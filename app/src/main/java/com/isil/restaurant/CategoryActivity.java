@@ -29,6 +29,8 @@ public class CategoryActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setSubtitle("Categorias");
 
+
+
         List<Food> foodList = new ArrayList<>();
         foodList.add(new Food("Hamburguer", "TASTY","3.2","30 min","$50","Hamburguer", "https://i.imgur.com/DvpvklR.png"));
         foodList.add(new Food("Hamburguer2", "TASTY","5.3","30 min","$50","Hamburguer", "https://www.gacetamexicana.com/wp-content/uploads/2015/05/taylor-swift-presenting-jpg.jpg"));
@@ -41,16 +43,24 @@ public class CategoryActivity extends AppCompatActivity {
 
         // PREGUNTAR A STALIN COMO RECIBIR LA CATEGORÍA SEGÚN EL ICONO AL QUE LE HAGAN CLICK EN EL MAINACTIVITY
 
-        setFoodRecycler(foodList);
+        setFoodRecycler(foodList, "Hamburguer");
     }
 
-    private void setFoodRecycler(List<Food> foodList){
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void setFoodRecycler(List<Food> foodList, String category){
         Log.e("FOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO", foodList.toString());
         foodRecycler = findViewById(R.id.food_recycler);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         foodRecycler.setLayoutManager(layoutManager);
-        // foodList.stream().filter(x -> x.getCategory().contains(category)).collect(Collectors.toList());
-        foodAdapter = new FoodAdapter(this, foodList);
+        List<Food> finalList = foodList.stream().filter(x -> x.getCategory().contains(category)).collect(Collectors.toList());
+        foodAdapter = new FoodAdapter(this, finalList);
         foodRecycler.setAdapter(foodAdapter);
     }
 
