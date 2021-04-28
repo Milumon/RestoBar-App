@@ -4,17 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
+import com.isil.restaurant.adapter.FoodAdapter;
 import com.isil.restaurant.adapter.RecommendationAdapter;
 import com.isil.restaurant.adapter.StoreAdapter;
+import com.isil.restaurant.model.Food;
 import com.isil.restaurant.model.Recommendation;
 import com.isil.restaurant.model.Store;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
     RecyclerView recommendationRecycler;
     RecommendationAdapter recommendationAdapter;
@@ -25,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageButton mbtnHamburguer = findViewById(R.id.btnHamburguer);
+
+        mbtnHamburguer.setOnClickListener(this);
 
         // ingresar data al modelo
 
@@ -41,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
         storeList.add(new Store("Centro", R.drawable.storeone,"30 min"));
 
         setStoreRecycler(storeList);
+
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(this, CategoryActivity.class));
+
     }
 
     private void setRecommendationRecycler(List<Recommendation> recommendationList){
@@ -58,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
         storeAdapter = new StoreAdapter(this, storeList);
         storeRecycler.setAdapter(storeAdapter);
     }
+
+
+
 
 
 }
