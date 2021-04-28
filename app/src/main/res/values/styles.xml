@@ -52,4 +52,32 @@
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display2</item>
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="plato_cart">
+        <item name="android:layout_width">137dp</item>
+        <item name="android:layout_height">133dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:background">@drawable/fondo_plato</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="cuenta_cart">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">78dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/black_design</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="raya_cart">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">0.8dp</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">#B2A19797</item>
+        <item name="android:backgroundTint">#45978E8E</item>
+    </style>
 </resources>
