@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txvPlatoCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/easy_spanish_chiken"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgPlato"
+        android:layout_width="145dp"
+        android:layout_height="201dp"
+        android:background="@drawable/fondo_plato"
+        android:padding="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        app:srcCompat="@drawable/paradisebyrani"
+        android:contentDescription="@string/toda" />
+
+    <ImageView
+        android:id="@+id/imgRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/ic_menos"
+        android:contentDescription="@string/toda" />
+
+    <TextView
+        android:id="@+id/txvCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="100dp"
+
+        android:textColor="#BC2C3D"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imgPuntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="76dp"
+        app:srcCompat="@drawable/ic_round_more_horiz_24"
+         />
+
+    <TextView
+        android:id="@+id/txvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+</androidx.cardview.widget.CardView>
