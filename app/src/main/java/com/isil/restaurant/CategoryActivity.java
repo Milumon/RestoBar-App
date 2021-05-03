@@ -42,7 +42,7 @@ public class CategoryActivity extends AppCompatActivity {
         foodList.add(new Food("Chicken", "TASTY","5.3","30 min","$50","Chicken", "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5563136.jpg"));
 
         // PREGUNTAR A STALIN COMO RECIBIR LA CATEGORÍA SEGÚN EL ICONO AL QUE LE HAGAN CLICK EN EL MAINACTIVITY
-
+        // 
         setFoodRecycler(foodList, "Hamburguer");
     }
 

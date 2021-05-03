@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_price"
+        style="@style/cuenta_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_20_00"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_box"
+        app:layout_constraintEnd_toEndOf="@+id/item_more"
+        app:layout_constraintTop_toTopOf="@+id/item_box" />
+
+    <ImageView
+        android:id="@+id/item_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/title_food"
+        app:layout_constraintBottom_toBottomOf="@+id/item_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_image"
+        app:layout_constraintTop_toTopOf="@+id/item_name"
+        app:srcCompat="@drawable/ic_round_more_horiz_24" />
+
+    <ImageButton
+        android:id="@+id/btnMenos"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:contentDescription="@string/less"
+        app:layout_constraintBottom_toBottomOf="@+id/item_box"
+        app:layout_constraintStart_toStartOf="@+id/item_box"
+        app:layout_constraintTop_toTopOf="@+id/item_box"
+        app:srcCompat="@drawable/ic_menos" />
+
+    <TextView
+        android:id="@+id/item_cantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1"
+        app:layout_constraintBottom_toBottomOf="@+id/item_box"
+        app:layout_constraintEnd_toEndOf="@+id/item_box"
+        app:layout_constraintStart_toStartOf="@+id/item_box"
+        app:layout_constraintTop_toTopOf="@+id/item_box"
+        style="@style/quantity" />
+
+    <TextureView
+        android:id="@+id/item_box"
+        android:layout_width="74dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/item_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="131dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/food_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/itemthree" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/easy_spanish_chicken"
+        android:textAppearance="@style/subtitle_bold"
+        app:layout_constraintStart_toEndOf="@+id/item_image"
+        app:layout_constraintTop_toTopOf="@+id/item_image" />
+
+    <ImageButton
+        android:id="@+id/btnMas"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/more"
+        app:layout_constraintBottom_toBottomOf="@+id/item_box"
+        app:layout_constraintEnd_toEndOf="@+id/item_box"
+        app:layout_constraintTop_toTopOf="@+id/item_box"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>

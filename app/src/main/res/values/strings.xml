@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">restaurant</string>
+    <string name="app_name">Eat App</string>
     <string name="subtitle_bold">Quick Action</string>
     <string name="good_morning">Good Morning</string>
-    <string name="username">{Username}</string>
+    <string name="username">Miluska R.</string>
     <string name="recomedaciones">Recomedaciones:</string>
     <string name="hamburguer">hamburguer</string>
     <string name="chicken">chicken</string>
@@ -18,7 +18,6 @@
     <string name="section_chicken">Chicken</string>
     <string name="section_drink">Drink</string>
     <string name="section_pizza">Pizza</string>
-    <string name="locales">Locales</string>
     <string name="see_more">See More</string>
     <string name="local">local</string>
     <string name="larco">Larco</string>
@@ -33,4 +32,34 @@
     <string name="easy_spanish_chiken">Easy Spanish Chiken</string>
     <string name="_10_00">$10.00</string>
     <string name="_52_000">$52.00</string>
+    <string name="inicio">Inicio</string>
+    <string name="categorias">Categorías</string>
+    <string name="perfil">Perfil</string>
+    <string name="locales">Locales</string>
+    <string name="carrito">Carrito</string>
+    <string name="salir">Salir</string>
+    <string name="hamburguesas">Hamburguesas</string>
+    <string name="pizzas">Pizzas</string>
+    <string name="bebidas">Bebidas</string>
+    <string name="pollo">Pollo</string>
+    <string name="promociones">Promociones</string>
+    <string name="discount">Discount</string>
+    <string name="item_total">Item Total</string>
+    <string name="_62_00">$62.00</string>
+    <string name="free">FREE</string>
+    <string name="change">CHANGE</string>
+    <string name="deliver_at_home">Deliver at :Home</string>
+    <string name="confirm_order">CONFIRM ORDER</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="notification">notification</string>
+    <string name="location">location</string>
+    <string name="returntext">returnText</string>
+    <string name="_20_00">$20.00</string>
+    <string name="easy_spanish_chicken">Easy Spanish Chicken</string>
+    <string name="_1">1</string>
+    <string name="title_food">title food</string>
+    <string name="less">less</string>
+    <string name="food_image">food image</string>
+    <string name="more">more</string>
+    <string name="resumen_de_compra">Resumen de compra</string>
 </resources>

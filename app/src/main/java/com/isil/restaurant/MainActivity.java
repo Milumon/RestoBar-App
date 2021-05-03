@@ -6,20 +6,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.isil.restaurant.adapter.FoodAdapter;
 import com.isil.restaurant.adapter.RecommendationAdapter;
 import com.isil.restaurant.adapter.StoreAdapter;
-import com.isil.restaurant.model.Food;
 import com.isil.restaurant.model.Recommendation;
 import com.isil.restaurant.model.Store;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
@@ -34,8 +33,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         ImageButton mbtnHamburguer = findViewById(R.id.btnHamburguer);
-
         mbtnHamburguer.setOnClickListener(this);
+
+        ImageButton mbtnChicken = findViewById(R.id.btnChicken);
+        mbtnChicken.setOnClickListener(this);
+
+        ImageButton mbtnDrink = findViewById(R.id.btnDrink);
+        mbtnDrink.setOnClickListener(this);
+
+        ImageButton mbtnPizza = findViewById(R.id.btnPizza);
+        mbtnPizza.setOnClickListener(this);
+
 
         // ingresar data al modelo
 
@@ -57,10 +65,67 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
-        startActivity(new Intent(this, CategoryActivity.class));
-
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_inicio_sesion, menu);
+        return true;
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnHamburguer:
+                startActivity(new Intent(this, CategoryActivity.class));
+                break;
+            case R.id.btnChicken:
+                startActivity(new Intent(this, CategoryActivity.class));
+                break;
+            case R.id.btnDrink:
+                startActivity(new Intent(this, CategoryActivity.class));
+                break;
+            case R.id.btnPizza:
+                startActivity(new Intent(this, CategoryActivity.class));
+                break;
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.nav_perfil:
+                // mostrarPerfil();
+                return true;
+            case R.id.nav_carrito:
+                mostrarCarrito();
+                return true;
+            case R.id.nav_promociones:
+                // mostrarCarrito();
+                return true;
+            case R.id.nav_salir:
+                mostrarSalir();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void mostrarCarrito() {
+
+        startActivity(new Intent(this, ShoppingCart.class));
+    }
+
+    private void mostrarAyuda() {
+
+        // startActivity(new Intent(this,AyudaActivity.class));
+    }
+
+    private void mostrarSalir() {
+
+        startActivity(new Intent(this,LoginActivity.class));
+    }
+
+    ////////////////////////////////
 
     private void setRecommendationRecycler(List<Recommendation> recommendationList){
         recommendationRecycler = findViewById(R.id.recommendation_recycler);
@@ -77,9 +142,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         storeAdapter = new StoreAdapter(this, storeList);
         storeRecycler.setAdapter(storeAdapter);
     }
-
-
-
-
-
 }

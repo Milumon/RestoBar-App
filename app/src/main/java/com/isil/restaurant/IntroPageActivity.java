@@ -22,7 +22,7 @@ public class IntroPageActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v){
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, LoginActivity.class));
 
     }
 
