@@ -16,7 +16,9 @@
         android:title="@string/locales" />
     <item
         android:id="@+id/nav_carrito"
-        android:title="@string/carrito" />
+        android:icon="@drawable/ic_canasta"
+        android:title="@string/carrito"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/nav_salir"
         android:title="@string/salir" />
