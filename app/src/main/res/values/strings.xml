@@ -86,4 +86,8 @@
     <string name="capacidad">Capacidad:</string>
     <string name="jr_larco_333">Jr Larco 333</string>
     <string name="_40">40</string>
+    <string name="pollito_con_papas">Pollito con papas</string>
+    <string name="plato">Plato</string>
+    <string name="product_image">product image</string>
+    <string name="cart_image">cart image</string>
 </resources>

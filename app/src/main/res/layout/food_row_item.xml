@@ -2,25 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/item_image"
-        android:layout_width="154dp"
-        android:layout_height="114dp"
+        android:layout_width="128dp"
+        android:layout_height="104dp"
         android:layout_marginTop="20dp"
+        android:contentDescription="@string/product_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/itemone" />
 
     <TextView
         android:id="@+id/item_name"
-        android:layout_width="163dp"
+        android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Plato"
+        android:text="@string/plato"
         android:textAppearance="@style/titulo_bold"
         android:textColor="@color/black_design"
         android:textSize="18sp"
@@ -29,9 +30,9 @@
 
     <TextView
         android:id="@+id/item_description"
-        android:layout_width="114dp"
+        android:layout_width="wrap_content"
         android:layout_height="34dp"
-        android:text="Pollito con papas"
+        android:text="@string/pollito_con_papas"
         android:textAlignment="viewStart"
         android:textAppearance="@style/subtitle_bold"
         android:textColor="@color/gray_design"
@@ -43,25 +44,23 @@
         android:id="@+id/item_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/proximanovabold"
         android:textColor="@color/red_design"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
-        app:layout_constraintEnd_toEndOf="@+id/item_cart"
+        app:layout_constraintStart_toEndOf="@+id/ratingBar"
         tools:text="@string/price" />
 
     <ImageButton
         android:id="@+id/item_cart"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginStart="15dp"
         android:background="@drawable/ic_cart"
+        android:contentDescription="@string/cart_image"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/item_price"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toEndOf="@+id/ratingBar"
-        app:layout_constraintTop_toTopOf="@+id/item_name" />
+        app:layout_constraintEnd_toEndOf="@+id/item_price" />
 
     <RatingBar
         android:id="@+id/ratingBar"
@@ -78,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="40 min"
+        android:text="@string/_40_min"
         app:layout_constraintBottom_toBottomOf="@+id/item_image"
         app:layout_constraintStart_toStartOf="@+id/ratingBar"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"

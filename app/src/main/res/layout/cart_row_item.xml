@@ -10,23 +10,22 @@
         style="@style/cuenta_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
         android:text="@string/_20_00"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/item_box"
         app:layout_constraintEnd_toEndOf="@+id/item_more"
+        app:layout_constraintStart_toEndOf="@+id/item_box"
         app:layout_constraintTop_toTopOf="@+id/item_box" />
 
     <ImageView
         android:id="@+id/item_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="190dp"
         android:layout_marginEnd="20dp"
         android:contentDescription="@string/title_food"
-        app:layout_constraintBottom_toBottomOf="@+id/item_name"
+        app:layout_constraintBottom_toTopOf="@+id/item_price"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/item_image"
-        app:layout_constraintTop_toTopOf="@+id/item_name"
         app:srcCompat="@drawable/ic_round_more_horiz_24" />
 
     <ImageButton
