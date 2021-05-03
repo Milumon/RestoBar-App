@@ -10,7 +10,8 @@
     android:focusableInTouchMode="true"
 
 
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:focusable="true">
 
     <ImageView
         android:id="@+id/imageView"
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/proximanovabold"
-        android:text="Bienvenido"
+        android:text="@string/bienvenido"
         android:textColor="@color/black_design"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Ingresa tus datos para continuar"
+        android:text="@string/ingresa_tus_datos_para_continuar"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="@+id/textView12"
@@ -55,11 +56,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:fontFamily="@font/proximanovaregular"
+        android:autofillHints=""
         android:ems="10"
+        android:fontFamily="@font/proximanovaregular"
+        android:hint="@string/email"
         android:inputType="textPassword"
         android:lineSpacingExtra="14sp"
-        android:text="Name"
+        android:text="@string/name"
         android:textAllCaps="true"
         android:textColor="@color/gray_design"
         android:textSize="18sp"
@@ -73,11 +76,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/proximanovaregular"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:lineSpacingExtra="14sp"
-        android:text="E-mail"
+        android:text="@string/e_mail"
         android:textColor="@color/gray_design"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,21 +96,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/proximanovabold"
-        android:text="¿Olvidaste tu contraseña?"
+        android:text="@string/olvidaste_tu_contrase_a"
         android:textAlignment="textEnd"
         android:textColor="@color/red_design"
         android:textSize="14sp"
         android:onClick="onClick"
         android:clickable="true"
         app:layout_constraintStart_toStartOf="@+id/editTextPasswordLogin"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordLogin"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="INGRESAR"
+        android:text="@string/ingresarLogin"
         app:layout_constraintEnd_toEndOf="@+id/editTextPasswordLogin"
         app:layout_constraintStart_toStartOf="@+id/editTextPasswordLogin"
         app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
@@ -115,7 +121,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="REGISTRARSE"
+        android:text="@string/registrarseLogin"
         app:layout_constraintEnd_toEndOf="@+id/btnLogin"
         app:layout_constraintStart_toStartOf="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"

@@ -71,4 +71,19 @@
     <string name="persona">persona</string>
     <string name="nosotros_title">Nosotros</string>
     <string name="recomendaciones">Recomendaciones</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="ingresa_tus_datos_para_continuar">Ingresa tus datos para continuar</string>
+    <string name="olvidaste_tu_contrase_a">¿Olvidaste tu contraseña?</string>
+    <string name="ingresarLogin">INGRESAR</string>
+    <string name="registrarseLogin">REGISTRARSE</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="nombre">Nombre</string>
+    <string name="direcci_n">Dirección</string>
+    <string name="e_mail">E-mail</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
+    <string name="image_avatar">image avatar</string>
+    <string name="capacidad">Capacidad:</string>
+    <string name="jr_larco_333">Jr Larco 333</string>
+    <string name="_40">40</string>
 </resources>

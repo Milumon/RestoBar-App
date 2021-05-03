@@ -9,7 +9,8 @@
 
 
     android:focusableInTouchMode="true"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    android:focusable="true">
 
     <EditText
         android:id="@+id/editTextDireccion"
@@ -20,12 +21,13 @@
         android:fontFamily="@font/proximanovaregular"
         android:inputType="textPersonName"
         android:lineSpacingExtra="14sp"
-        android:text="Dirección"
+        android:text="@string/direcci_n"
         android:textColor="@color/gray_design"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/editTextNameProfile"
         app:layout_constraintStart_toStartOf="@+id/editTextNameProfile"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNameProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameProfile"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextNameProfile"
@@ -36,12 +38,13 @@
         android:fontFamily="@font/proximanovaregular"
         android:inputType="textPersonName"
         android:lineSpacingExtra="14sp"
-        android:text="Nombre"
+        android:text="@string/nombre"
         android:textColor="@color/gray_design"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/item_image_profile"
         app:layout_constraintStart_toStartOf="@+id/item_image_profile"
-        app:layout_constraintTop_toBottomOf="@+id/item_image_profile" />
+        app:layout_constraintTop_toBottomOf="@+id/item_image_profile"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextPasswordProfile"
@@ -52,13 +55,14 @@
         android:fontFamily="@font/proximanovaregular"
         android:inputType="textPassword"
         android:lineSpacingExtra="14sp"
-        android:text="Name"
+        android:text="@string/name"
         android:textAllCaps="true"
         android:textColor="@color/gray_design"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmailProfile"
         app:layout_constraintStart_toStartOf="@+id/editTextEmailProfile"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailProfile"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextEmailProfile"
@@ -69,12 +73,13 @@
         android:fontFamily="@font/proximanovaregular"
         android:inputType="textEmailAddress"
         android:lineSpacingExtra="14sp"
-        android:text="E-mail"
+        android:text="@string/e_mail"
         android:textColor="@color/gray_design"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/editTextDireccion"
         app:layout_constraintStart_toStartOf="@+id/editTextDireccion"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDireccion" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDireccion"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/item_image_profile"
@@ -82,6 +87,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/mujer"
+        android:contentDescription="@string/image_avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Guardar Cambios"
+        android:text="@string/guardar_cambios"
         app:layout_constraintEnd_toEndOf="@+id/editTextPasswordProfile"
         app:layout_constraintStart_toStartOf="@+id/editTextPasswordProfile"
         app:layout_constraintTop_toBottomOf="@+id/editTextPasswordProfile" />
