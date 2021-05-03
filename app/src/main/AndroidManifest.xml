@@ -11,12 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Restaurant">
-        <activity android:name=".RecoverPasswordActivity"></activity>
+        <activity android:name=".StoresActivity"></activity>
+        <activity android:name=".RecommendationActivity" />
+        <activity android:name=".NosotrosActivity" />
+        <activity android:name=".RecoverPasswordActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity   android:name=".LoginActivity"
-                    android:theme="@style/Theme.Restaurant.NoActionBar"/>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.Restaurant.NoActionBar" />
         <activity android:name=".ShoppingCart" />
-        <activity android:name=".CategoryActivity" />
+        <activity android:name=".HamburguerActivity" />
         <activity android:name=".ProfileActivity" />
         <activity
             android:name=".SplashActivity"

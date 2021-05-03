@@ -48,20 +48,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // ingresar data al modelo
 
         List<Recommendation> recommendationList = new ArrayList<>();
-        recommendationList.add(new Recommendation("Pasta", "3.2", "30 min", "$50", R.drawable.itemone));
-        recommendationList.add(new Recommendation("Fideo", "4.5", "40 min", "$50", R.drawable.itemtwo));
-        recommendationList.add(new Recommendation("Sandwich", "3.2", "30 min", "$50", R.drawable.itemthree));
+        recommendationList.add(new Recommendation("Arroz con Pollo", "5.2", "30 min", "$50", "https://i.imgur.com/839PxP5.png"));
+        recommendationList.add(new Recommendation("Sandwich", "3.2", "50 min", "$30", "https://i.imgur.com/9iEBDRx.png"));
+        recommendationList.add(new Recommendation("Pasta", "4.6", "30 min", "$40", "https://i.imgur.com/Vj1ixrL.png"));
 
         setRecommendationRecycler(recommendationList);
 
         List<Store> storeList = new ArrayList<>();
-        storeList.add(new Store("Caminos", R.drawable.storeone,"30 min"));
-        storeList.add(new Store("Larco", R.drawable.storeone,"30 min"));
-        storeList.add(new Store("Centro", R.drawable.storeone,"30 min"));
+        storeList.add(new Store("Caminos", "https://i.imgur.com/1KsMzVX.png","30 min", "30", "Jr Camino 1213"));
+        storeList.add(new Store("Larco", "https://i.imgur.com/1KsMzVX.png","30 min", "20", "Jr Larco 1213"));
+        storeList.add(new Store("Centro", "https://i.imgur.com/1KsMzVX.png","30 min", "40", "Jr Centro 1213"));
 
         setStoreRecycler(storeList);
-
-
     }
 
     @Override
@@ -75,16 +73,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnHamburguer:
-                startActivity(new Intent(this, CategoryActivity.class));
+                startActivity(new Intent(this, HamburguerActivity.class));
                 break;
             case R.id.btnChicken:
-                startActivity(new Intent(this, CategoryActivity.class));
+                startActivity(new Intent(this, HamburguerActivity.class));
                 break;
             case R.id.btnDrink:
-                startActivity(new Intent(this, CategoryActivity.class));
+                startActivity(new Intent(this, HamburguerActivity.class));
                 break;
             case R.id.btnPizza:
-                startActivity(new Intent(this, CategoryActivity.class));
+                startActivity(new Intent(this, HamburguerActivity.class));
+                break;
+            case R.id.btnVerMasLocales:
+                startActivity(new Intent(this, StoresActivity.class));
+                break;
+            case R.id.btnVerMasRecomendaciones:
+                startActivity(new Intent(this, RecommendationActivity.class));
                 break;
         }
     }
@@ -94,36 +98,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.nav_perfil:
-                // mostrarPerfil();
+                mostrarPerfil();
                 return true;
             case R.id.nav_carrito:
                 mostrarCarrito();
                 return true;
-            case R.id.nav_promociones:
-                // mostrarCarrito();
+            case R.id.nav_recomendaciones:
+                mostrarRecomendaciones();
                 return true;
             case R.id.nav_salir:
                 mostrarSalir();
+                return true;
+            case R.id.nav_locales:
+                mostrarLocales();
+                return true;
+            case R.id.nav_nosotros:
+                mostrarNosotros();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    private void mostrarCarrito() {
+    private void mostrarPerfil() {  startActivity(new Intent(this, ProfileActivity.class)); }
 
-        startActivity(new Intent(this, ShoppingCart.class));
-    }
+    private void mostrarCarrito() { startActivity(new Intent(this, ShoppingCart.class));    }
 
-    private void mostrarAyuda() {
+    private void mostrarLocales() { startActivity(new Intent(this, StoresActivity.class));  }
 
-        // startActivity(new Intent(this,AyudaActivity.class));
-    }
+    private void mostrarNosotros() {    startActivity(new Intent(this, NosotrosActivity.class));    }
 
-    private void mostrarSalir() {
+    private void mostrarSalir() {   startActivity(new Intent(this,LoginActivity.class));    }
 
-        startActivity(new Intent(this,LoginActivity.class));
-    }
+    private void mostrarRecomendaciones() { startActivity(new Intent(this,RecommendationActivity.class));   }
 
     ////////////////////////////////
 

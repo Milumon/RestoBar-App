@@ -4,6 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+
+
     tools:context=".ProfileActivity">
+
+    <EditText
+        android:id="@+id/editTextDireccion"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/proximanovaregular"
+        android:inputType="textPersonName"
+        android:lineSpacingExtra="14sp"
+        android:text="Dirección"
+        android:textColor="@color/gray_design"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNameProfile"
+        app:layout_constraintStart_toStartOf="@+id/editTextNameProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameProfile" />
+
+    <EditText
+        android:id="@+id/editTextNameProfile"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:fontFamily="@font/proximanovaregular"
+        android:inputType="textPersonName"
+        android:lineSpacingExtra="14sp"
+        android:text="Nombre"
+        android:textColor="@color/gray_design"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/item_image_profile"
+        app:layout_constraintStart_toStartOf="@+id/item_image_profile"
+        app:layout_constraintTop_toBottomOf="@+id/item_image_profile" />
+
+    <EditText
+        android:id="@+id/editTextPasswordProfile"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/proximanovaregular"
+        android:inputType="textPassword"
+        android:lineSpacingExtra="14sp"
+        android:text="Name"
+        android:textAllCaps="true"
+        android:textColor="@color/gray_design"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmailProfile"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailProfile" />
+
+    <EditText
+        android:id="@+id/editTextEmailProfile"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/proximanovaregular"
+        android:inputType="textEmailAddress"
+        android:lineSpacingExtra="14sp"
+        android:text="E-mail"
+        android:textColor="@color/gray_design"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDireccion"
+        app:layout_constraintStart_toStartOf="@+id/editTextDireccion"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDireccion" />
+
+    <ImageView
+        android:id="@+id/item_image_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Guardar Cambios"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordProfile"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordProfile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

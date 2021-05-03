@@ -1,7 +1,6 @@
 package com.isil.restaurant.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,8 +27,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         this.context = context;
         this.foodlist = foodlist;
     }
-
-
 
     @NonNull
     @Override
@@ -68,7 +65,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
             itemImage = itemView.findViewById(R.id.item_image);
             itemPrice = itemView.findViewById(R.id.item_price);
-            itemTime = itemView.findViewById(R.id.item_time);
+            itemTime = itemView.findViewById(R.id.item_noUsed);
             itemName = itemView.findViewById(R.id.item_name);
             itemRating = itemView.findViewById(R.id.ratingBar);
             itemDescription = itemView.findViewById(R.id.item_description);

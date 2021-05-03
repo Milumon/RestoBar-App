@@ -6,9 +6,9 @@ public class Recommendation {
     String rating;
     String time;
     String price;
-    Integer imageURL;
+    String imageURL;
 
-    public Recommendation(String name, String rating, String time, String price, Integer imageURL) {
+    public Recommendation(String name, String rating, String time, String price, String imageURL) {
         this.name = name;
         this.rating = rating;
         this.time = time;
@@ -48,11 +48,11 @@ public class Recommendation {
         this.price = price;
     }
 
-    public Integer getImageURL() {
+    public String getImageURL() {
         return imageURL;
     }
 
-    public void setImageURL(Integer imageURL) {
+    public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
 }

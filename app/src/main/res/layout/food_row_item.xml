@@ -17,7 +17,7 @@
     <TextView
         android:id="@+id/item_name"
         android:layout_width="163dp"
-        android:layout_height="35dp"
+        android:layout_height="19dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:text="Plato"
@@ -73,13 +73,13 @@
         app:layout_constraintTop_toBottomOf="@+id/item_description" />
 
     <TextView
-        android:id="@+id/item_time"
+        android:id="@+id/item_noUsed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:text="40 min"
         app:layout_constraintBottom_toBottomOf="@+id/item_image"
         app:layout_constraintStart_toStartOf="@+id/ratingBar"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

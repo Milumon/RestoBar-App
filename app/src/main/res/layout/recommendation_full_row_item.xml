@@ -9,9 +9,9 @@
         android:id="@+id/item_image"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@string/item_image"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/itemone" />
@@ -20,44 +20,43 @@
         android:id="@+id/item_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/proximanovabold"
         android:text="@string/item_name"
-        app:layout_constraintStart_toStartOf="@+id/item_image"
-        app:layout_constraintTop_toBottomOf="@+id/item_image" />
+        app:layout_constraintStart_toEndOf="@+id/item_image"
+        app:layout_constraintTop_toTopOf="@+id/item_image" />
 
     <TextView
         android:id="@+id/item_noUsed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/proximanovaregular"
         android:text="@string/item_time"
-        app:layout_constraintBottom_toBottomOf="@+id/item_name"
-        app:layout_constraintEnd_toEndOf="@+id/item_image"
-        app:layout_constraintTop_toTopOf="@+id/item_name" />
+        app:layout_constraintStart_toStartOf="@+id/item_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_name" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:progressTint="#FFEB3B"
-        app:layout_constraintStart_toStartOf="@+id/item_name"
-        app:layout_constraintTop_toBottomOf="@+id/item_name" />
+        app:layout_constraintStart_toStartOf="@+id/item_noUsed"
+        app:layout_constraintTop_toBottomOf="@+id/item_noUsed" />
 
     <TextView
         android:id="@+id/item_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/proximanovabold"
         android:text="@string/price"
         android:textColor="@color/red_design"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/item_image"
         app:layout_constraintStart_toStartOf="@+id/ratingBar"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
@@ -65,13 +64,13 @@
         android:id="@+id/item_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"
         android:background="#FFFFFF"
         android:contentDescription="@string/add_to_cart"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/item_price"
-        app:layout_constraintEnd_toEndOf="@+id/item_noUsed"
-        app:layout_constraintTop_toBottomOf="@+id/item_noUsed"
+        app:layout_constraintBottom_toBottomOf="@+id/item_image"
+        app:layout_constraintStart_toEndOf="@+id/ratingBar"
+        app:layout_constraintTop_toTopOf="@+id/item_image"
         app:srcCompat="@drawable/ic_cart"
         tools:srcCompat="@drawable/ic_cart" />
 </androidx.constraintlayout.widget.ConstraintLayout>

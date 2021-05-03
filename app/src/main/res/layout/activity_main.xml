@@ -178,13 +178,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/btnVerMasRecomendaciones"
         style="@style/see_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:text="@string/see_more"
         android:textSize="14sp"
+
+        android:onClick="onClick"
+        android:clickable="true"
+
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView4" />
@@ -200,11 +204,15 @@
         app:layout_constraintTop_toBottomOf="@+id/recommendation_recycler" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/btnVerMasLocales"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:text="@string/see_more"
+
+        android:onClick="onClick"
+        android:clickable="true"
+
         android:textAppearance="@style/see_more"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -215,7 +223,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="@+id/btnVerMasLocales"
         app:layout_constraintStart_toStartOf="@+id/recommendation_recycler"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 

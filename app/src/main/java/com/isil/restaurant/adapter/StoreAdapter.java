@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.isil.restaurant.R;
 import com.isil.restaurant.model.Store;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -39,7 +39,8 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.StoreViewHol
     @Override
     public void onBindViewHolder(@NonNull StoreViewHolder holder, int position) {
 
-        holder.itemImage.setImageResource(storelist.get(position).getImageURL());
+        Picasso.get().load(storelist.get(position).getImageURL()).into(holder.itemImage);
+        // holder.itemImage.setImageResource(foodlist.get(position).getImageURL());
         holder.itemName.setText(storelist.get(position).getName());
         holder.itemTime.setText(storelist.get(position).getTime());
 
@@ -60,7 +61,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.StoreViewHol
             super(itemView);
 
             itemImage = itemView.findViewById(R.id.item_image);
-            itemTime = itemView.findViewById(R.id.item_time);
+            itemTime = itemView.findViewById(R.id.item_noUsed);
             itemName = itemView.findViewById(R.id.item_name);
         }
     }
