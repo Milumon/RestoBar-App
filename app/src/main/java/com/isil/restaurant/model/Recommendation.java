@@ -2,18 +2,28 @@ package com.isil.restaurant.model;
 
 public class Recommendation {
 
+    String id;
     String name;
     String rating;
     String time;
     String price;
     String imageURL;
 
-    public Recommendation(String name, String rating, String time, String price, String imageURL) {
+    public Recommendation(String id, String name, String rating, String time, String price, String imageURL) {
+        this.id = id;
         this.name = name;
         this.rating = rating;
         this.time = time;
         this.price = price;
         this.imageURL = imageURL;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

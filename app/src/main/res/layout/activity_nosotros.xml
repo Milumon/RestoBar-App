@@ -8,22 +8,24 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="229dp"
-        tools:layout_editor_absoluteY="379dp">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/imgRestaurant"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="300dp"
                     android:contentDescription="@string/imagenlocal"
                     android:scaleType="centerCrop"
@@ -50,19 +52,6 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/proximanovabold"
-                    android:text="@string/team"
-                    android:textColor="@color/red_design"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView20"
-                    app:layout_constraintStart_toStartOf="@+id/textView11"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-                <TextView
                     android:id="@+id/textView11"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -73,42 +62,48 @@
                     app:layout_constraintStart_toStartOf="@+id/textView6"
                     app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-                <TextView
-                    android:id="@+id/textView20"
-                    style="@style/nombresNosotros"
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/proximanovabold"
-                    android:text="@string/miluska"
-                    android:textColor="@color/black_design"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="@+id/textView19"
-                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11">
 
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="0dp"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="10dp"
-                    android:contentDescription="@string/persona"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/mujer"
-                    app:layout_constraintEnd_toEndOf="@+id/textView11"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/textView20"
-                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+                    <RadioButton
+                        android:id="@+id/btnPersonaUno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:drawable/btn_star"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:text="@string/miluska"
+                        android:textAlignment="textStart" />
 
-                <TextView
-                    android:id="@+id/textView21"
+                    <RadioButton
+                        android:id="@+id/btnPersonaDos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:drawable/btn_star"
+                        android:text="@string/mariana"
+                        android:textAlignment="textStart" />
+
+                    <RadioButton
+                        android:id="@+id/btnPersonaTres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:drawable/btn_star"
+                        android:text="@string/josemaria"
+                        android:textAlignment="textStart" />
+                </RadioGroup>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintTeam"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/lorem_person_description"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView10"
-                    app:layout_constraintStart_toStartOf="@+id/imageView10"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

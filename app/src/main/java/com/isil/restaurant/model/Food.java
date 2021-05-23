@@ -2,6 +2,7 @@ package com.isil.restaurant.model;
 
 public class Food {
 
+    String id;
     String name;
     String description;
     String rating;
@@ -10,7 +11,8 @@ public class Food {
     String category;
     String imageURL;
 
-    public Food(String name, String description, String rating, String time, String price, String category, String imageURL) {
+    public Food(String id, String name, String description, String rating, String time, String price, String category, String imageURL) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.rating = rating;
@@ -18,6 +20,14 @@ public class Food {
         this.price = price;
         this.category = category;
         this.imageURL = imageURL;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

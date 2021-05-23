@@ -12,7 +12,7 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/storeone"
         android:contentDescription="@string/local"
-        android:scaleType="centerInside"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
