@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/proximanovabold"
+        android:text="@string/id"
+        android:textAlignment="viewStart"
+        android:textColor="@color/red_design"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/item_name1"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginBottom="10dp"
+        android:baselineAligned="false"
+        android:textAppearance="@style/titulo_bold"
+        android:textColor="@color/black_design"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/proximanovabold"
+        android:text="@string/nombres"
+        android:textColor="@color/gray_design" />
+
+    <TextView
+        android:id="@+id/item_name2"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginBottom="10dp"
+        android:textAppearance="@style/titulo_bold"
+        android:textColor="@color/black_design"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/proximanovabold"
+        android:text="@string/apellidos"
+        android:textAlignment="textStart"
+        android:textColor="@color/gray_design"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/item_name3"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginBottom="10dp"
+        android:textAppearance="@style/titulo_bold"
+        android:textColor="@color/black_design"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/proximanovabold"
+        android:text="@string/cargo"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/gray_design"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/item_name4"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginBottom="10dp"
+        android:textAppearance="@style/titulo_bold"
+        android:textColor="@color/black_design"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/proximanovabold"
+        android:text="@string/fecha_de_nacimiento"
+        android:textAlignment="textStart"
+        android:textColor="@color/gray_design"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/item_name5"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginBottom="10dp"
+        android:textAppearance="@style/titulo_bold"
+        android:textColor="@color/black_design"
+        android:textSize="18sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/red_design" />
+
+
+</LinearLayout>
