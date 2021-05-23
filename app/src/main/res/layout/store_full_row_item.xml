@@ -10,14 +10,12 @@
         android:layout_width="180dp"
         android:layout_height="90dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/storeone"
+        android:layout_marginBottom="20dp"
         android:contentDescription="@string/local"
-        android:scaleType="centerInside"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/storeone"
-        tools:srcCompat="@drawable/storeone" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/item_name"
@@ -44,10 +42,12 @@
 
     <TextView
         android:id="@+id/item_direccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_width="106dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
         android:text="@string/jr_larco_333"
+        app:layout_constraintEnd_toEndOf="@+id/item_capacidad"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/item_noUsed"
         app:layout_constraintTop_toBottomOf="@+id/item_noUsed" />
 

@@ -37,11 +37,12 @@ public class StoreFullAdapter extends RecyclerView.Adapter<StoreFullAdapter.Stor
     @Override
     public void onBindViewHolder(@NonNull StoreFullViewHolder holder, int position) {
 
+
+        holder.itemName.setText(storeFulllist.get(position).getName());
+        holder.itemDireccion.setText(storeFulllist.get(position).getDireccion());
+        holder.itemCapacidad.setText(storeFulllist.get(position).getCapacidad());
         Picasso.get().load(storeFulllist.get(position).getImageURL()).into(holder.itemImage);
         // holder.itemImage.setImageResource(foodlist.get(position).getImageURL());
-        holder.itemName.setText(storeFulllist.get(position).getName());
-        holder.itemCapacidad.setText(storeFulllist.get(position).getCapacidad());
-        holder.itemDireccion.setText(storeFulllist.get(position).getDireccion());
 
 
     }

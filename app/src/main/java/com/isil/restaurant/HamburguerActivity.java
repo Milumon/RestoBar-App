@@ -27,17 +27,17 @@ public class HamburguerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setSubtitle("Categorias");
+        getSupportActionBar().setSubtitle("Category");
 
         List<Food> foodList = new ArrayList<>();
-        foodList.add(new Food("Hamburguer", "TASTY","3.2","30 min","$50","Hamburguer", "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG96777.png"));
-        foodList.add(new Food("Hamburguer2", "TASTY","5.3","30 min","$50","Hamburguer", "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG96777.png"));
-        foodList.add(new Food("Drink", "TASTY","3.0,","30 min","$50", "Drink", "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5563136.jpg"));
-        foodList.add(new Food("Drink", "TASTY","3.2","30 min","$50","Drink", "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5563136.jpg"));
-        foodList.add(new Food("Pizza", "TASTY","5.3","30 min","$50","Pizza", "https://i.imgur.com/9iEBDRx.png"));
-        foodList.add(new Food("Pizza", "TASTY","3.0,","30 min","$50", "Pizza", "https://i.imgur.com/9iEBDRx.png"));
-        foodList.add(new Food("Chicken", "TASTY","3.2","30 min","$50","Chicken", "https://i.imgur.com/Vj1ixrL.png"));
-        foodList.add(new Food("Chicken", "TASTY","5.3","30 min","$50","Chicken", "https://i.imgur.com/Vj1ixrL.png"));
+        foodList.add(new Food("", "Hamburguer", "TASTY","3.2","30 min","$50","Hamburguer", "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG96777.png"));
+        foodList.add(new Food("", "Hamburguer2", "TASTY","5.3","30 min","$50","Hamburguer", "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG96777.png"));
+        foodList.add(new Food("", "Drink", "TASTY","3.0,","30 min","$50", "Drink", "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5563136.jpg"));
+        foodList.add(new Food("", "Drink", "TASTY","3.2","30 min","$50","Drink", "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F5563136.jpg"));
+        foodList.add(new Food("", "Pizza", "TASTY","5.3","30 min","$50","Pizza", "https://i.imgur.com/9iEBDRx.png"));
+        foodList.add(new Food("", "Pizza", "TASTY","3.0,","30 min","$50", "Pizza", "https://i.imgur.com/9iEBDRx.png"));
+        foodList.add(new Food("", "Chicken", "TASTY","3.2","30 min","$50","Chicken", "https://i.imgur.com/Vj1ixrL.png"));
+        foodList.add(new Food("", "Chicken", "TASTY","5.3","30 min","$50","Chicken", "https://i.imgur.com/Vj1ixrL.png"));
 
         // PREGUNTAR A STALIN COMO RECIBIR LA CATEGORÍA SEGÚN EL ICONO AL QUE LE HAGAN CLICK EN EL MAINACTIVITY
         // 

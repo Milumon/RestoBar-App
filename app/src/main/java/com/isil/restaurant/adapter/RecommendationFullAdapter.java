@@ -39,7 +39,7 @@ public class RecommendationFullAdapter extends RecyclerView.Adapter<Recommendati
     public void onBindViewHolder(@NonNull RecommendationFullViewHolder holder, int position) {
 
         System.out.printf("GAAAAAAAAAAAAAAAAA"+holder);
-
+        System.out.println(recommendationFulllist.get(position).getImageURL());
         Picasso.get().load(recommendationFulllist.get(position).getImageURL()).into(holder.itemImage);
         // holder.itemImage.setImageResource(recommendationFulllist.get(position).getImageURL());
 

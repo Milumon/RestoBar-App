@@ -2,18 +2,29 @@ package com.isil.restaurant.model;
 
 public class Store {
 
+    String id;
     String name;
     String imageURL;
     String time;
     String capacidad;
     String direccion;
 
-    public Store(String name, String imageURL, String time, String capacidad, String direccion) {
+    public Store(String id ,String name, String direccion, String capacidad, String imageURL, String time)  {
+        this.id = id;
         this.name = name;
         this.imageURL = imageURL;
         this.time = time;
         this.capacidad = capacidad;
         this.direccion = direccion;
+    }
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
