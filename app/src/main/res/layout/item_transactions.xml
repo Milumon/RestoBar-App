@@ -34,21 +34,26 @@
 
     <TextView
         android:id="@+id/tvMovimientoMonto"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
         android:text="Gasto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvMovimientoDescripcion"
-        app:layout_constraintTop_toBottomOf="@+id/tvMovimientoDescripcion" />
+        app:layout_constraintBottom_toBottomOf="@+id/txtMoney"
+        app:layout_constraintStart_toEndOf="@+id/txtMoney"
+        app:layout_constraintTop_toTopOf="@+id/txtMoney" />
 
     <TextView
         android:id="@+id/tvMovimientoFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="date"
         android:text="Fecha"
-        app:layout_constraintStart_toStartOf="@+id/tvMovimientoMonto"
-        app:layout_constraintTop_toBottomOf="@+id/tvMovimientoMonto" />
+        app:layout_constraintStart_toStartOf="@+id/txtMoney"
+        app:layout_constraintTop_toBottomOf="@+id/txtMoney" />
 
     <TextView
         android:id="@+id/tvMovimiento"
@@ -59,5 +64,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvMovimientoFecha"
         app:layout_constraintStart_toEndOf="@+id/tvMovimientoFecha"
         app:layout_constraintTop_toTopOf="@+id/tvMovimientoFecha" />
+
+    <TextView
+        android:id="@+id/txtMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="S/."
+        app:layout_constraintStart_toStartOf="@+id/tvMovimientoDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovimientoDescripcion" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

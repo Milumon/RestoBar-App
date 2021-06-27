@@ -43,7 +43,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         holder.itemId.setText(transactionlist.get(position).getIdmovimiento());
         holder.itemFecha.setText(transactionlist.get(position).getFecha());
         holder.itemDescripcion.setText(transactionlist.get(position).getDescripcion());
-        holder.itemMonto.setText(transactionlist.get(position).getMonto());
+        holder.itemMonto.setText(String.format("%.2f", transactionlist.get(position).getMonto()));
         holder.itemMovimiento.setText(transactionlist.get(position).getMovimiento());
         System.out.println("VALIDACIOOOOOOOOOOOOOOOOOOON EQUAL" + transactionlist.get(position).getMovimiento().equals( "-1"));
         if (transactionlist.get(position).getMovimiento().equals("-1")) {

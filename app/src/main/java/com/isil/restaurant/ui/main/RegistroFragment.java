@@ -1,5 +1,5 @@
 package com.isil.restaurant.ui.main;
-
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,19 +13,30 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.isil.restaurant.R;
 import com.isil.restaurant.datos.DatosSQLite;
+import com.isil.restaurant.model.Transaction;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class RegistroFragment extends Fragment implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
     TextInputEditText mtetDescripcion, mtetMonto;
     Button mbtnRegistrar;
     Switch toggleButton;
+    List<Transaction> transactionList = new ArrayList<>();
+
+    // variables para contador
+
+    TextView ingresos, gastos, total;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,9 +52,16 @@ public class RegistroFragment extends Fragment implements View.OnClickListener, 
         mtetMonto = view.findViewById(R.id.tetMonto);
         mbtnRegistrar = view.findViewById(R.id.btnRegistrar);
         mbtnRegistrar.setOnClickListener(this);
+        // switch
         toggleButton = view.findViewById(R.id.switchValue);
         toggleButton.setOnCheckedChangeListener(this);
         toggleButton.setChecked(false);
+        leerDatos();
+        // variables contador
+        ingresos = view.findViewById(R.id.txtIngresosAmount);
+        gastos = view.findViewById(R.id.txtGastosAmount);
+        total = view.findViewById(R.id.txtTotalAmount);
+        contarSaldo(transactionList);
     }
 
 
@@ -68,6 +86,9 @@ public class RegistroFragment extends Fragment implements View.OnClickListener, 
         mtetDescripcion.setText("");
         mtetMonto.setText("");
         mtetDescripcion.requestFocus();
+        leerDatos();
+        contarSaldo(transactionList);
+
     }
 
     @Override
@@ -80,6 +101,56 @@ public class RegistroFragment extends Fragment implements View.OnClickListener, 
             toggleButton.setChecked(false);
         }
         Log.v("Switch State=", "" + isChecked);
+
+    }
+
+    private void leerDatos() {
+
+        DatosSQLite datosSQLite = new DatosSQLite(getActivity());
+        Cursor cursor = datosSQLite.mostrarTodo(datosSQLite);
+        if(cursor != null){
+            if(cursor.moveToFirst()){
+                do{
+                    System.out.println(cursor.getString(cursor.getColumnIndex("idmovimiento")));
+                    Transaction transaction = new Transaction();
+                    transaction.setIdmovimiento(cursor.getString(cursor.getColumnIndex("idmovimiento")));
+                    transaction.setDescripcion(cursor.getString(cursor.getColumnIndex("descripcion")));
+                    transaction.setMonto(cursor.getDouble(cursor.getColumnIndex("monto")));
+                    transaction.setFecha(cursor.getString(cursor.getColumnIndex("fecha")));
+                    transaction.setMovimiento(cursor.getString(cursor.getColumnIndex("movimiento")));
+                    transactionList.add(transaction);
+
+
+                }while(cursor.moveToNext());
+            }
+        }
+    }
+
+    private void contarSaldo(List<Transaction> transactionList){
+            ingresos.setText("0");
+            gastos.setText("0");
+            total.setText("0");
+            Double ingresosAmount = getAmount(transactionList, "1");
+            Double gastosAmount = getAmount(transactionList, "-1");
+            Double totalAmount = ingresosAmount - gastosAmount;
+            ingresos.setText(String.format("%.2f", ingresosAmount));
+            gastos.setText(String.format("%.2f", gastosAmount));
+            total.setText(String.format("%.2f", totalAmount));
+    }
+
+    private Double getAmount(List<Transaction> transactionList, String text){
+        Double total = transactionList.stream()
+                .filter(x -> x.getMovimiento().equals(text))
+                .mapToDouble(Transaction::getMonto)
+                .sum();;
+        return total;
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        transactionList.clear();
 
     }
 }

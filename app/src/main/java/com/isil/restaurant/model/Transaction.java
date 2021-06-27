@@ -5,13 +5,13 @@ public class Transaction {
     String idmovimiento;
     String fecha;
     String descripcion;
-    String monto;
+    Double monto;
     String movimiento;
 
     public Transaction() {
     }
 
-    public Transaction(String idmovimiento, String fecha, String descripcion, String monto, String movimiento) {
+    public Transaction(String idmovimiento, String fecha, String descripcion, Double monto, String movimiento) {
         this.idmovimiento = idmovimiento;
         this.fecha = fecha;
         this.descripcion = descripcion;
@@ -43,11 +43,11 @@ public class Transaction {
         this.descripcion = descripcion;
     }
 
-    public String getMonto() {
+    public Double getMonto() {
         return monto;
     }
 
-    public void setMonto(String monto) {
+    public void setMonto(Double monto) {
         this.monto = monto;
     }
 

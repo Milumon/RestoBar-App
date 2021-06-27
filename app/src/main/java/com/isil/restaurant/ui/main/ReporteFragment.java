@@ -59,7 +59,7 @@ public class ReporteFragment extends Fragment {
                     Transaction transaction = new Transaction();
                     transaction.setIdmovimiento(cursor.getString(cursor.getColumnIndex("idmovimiento")));
                     transaction.setDescripcion(cursor.getString(cursor.getColumnIndex("descripcion")));
-                    transaction.setMonto(cursor.getString(cursor.getColumnIndex("monto")));
+                    transaction.setMonto(cursor.getDouble(cursor.getColumnIndex("monto")));
                     transaction.setFecha(cursor.getString(cursor.getColumnIndex("fecha")));
                     transaction.setMovimiento(cursor.getString(cursor.getColumnIndex("movimiento")));
                     transactionList.add(transaction);

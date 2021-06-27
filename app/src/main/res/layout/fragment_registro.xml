@@ -69,4 +69,60 @@
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
 
+    <TextView
+        android:id="@+id/txtIngresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:text="Total de Ingresos: S/."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
+
+    <TextView
+        android:id="@+id/txtGastos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Total de Gastos:    S/."
+        app:layout_constraintStart_toStartOf="@+id/txtIngresos"
+        app:layout_constraintTop_toBottomOf="@+id/txtIngresos" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Ingresos - Gastos :  S/."
+        app:layout_constraintStart_toStartOf="@+id/txtGastos"
+        app:layout_constraintTop_toBottomOf="@+id/txtGastos" />
+
+    <TextView
+        android:id="@+id/txtIngresosAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Ingresos"
+        app:layout_constraintBottom_toBottomOf="@+id/txtIngresos"
+        app:layout_constraintStart_toEndOf="@+id/txtIngresos"
+        app:layout_constraintTop_toTopOf="@+id/txtIngresos" />
+
+    <TextView
+        android:id="@+id/txtGastosAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gastos"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGastos"
+        app:layout_constraintStart_toStartOf="@+id/txtIngresosAmount"
+        app:layout_constraintTop_toTopOf="@+id/txtGastos" />
+
+    <TextView
+        android:id="@+id/txtTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTotal"
+        app:layout_constraintStart_toStartOf="@+id/txtGastosAmount"
+        app:layout_constraintTop_toTopOf="@+id/txtTotal" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
