@@ -50,6 +50,8 @@ public class ServiciosActivity extends AppCompatActivity implements View.OnClick
     List<Employee> servicios;
     List<Category> categorias;
     List<Store> locales;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
