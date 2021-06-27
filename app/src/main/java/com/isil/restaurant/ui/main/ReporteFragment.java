@@ -6,24 +6,29 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.isil.restaurant.R;
+import com.isil.restaurant.adapter.TransactionAdapter;
 import com.isil.restaurant.datos.DatosSQLite;
+import com.isil.restaurant.model.Transaction;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
 
 public class ReporteFragment extends Fragment {
 
-    ListView mlvReporte;
-    ArrayList arrayList = new ArrayList<HashMap<String,String>>();
+    RecyclerView mlvReporte;
+    RecyclerView transactionRecycler;
+    TransactionAdapter transactionAdapter;
 
 
     @Override
@@ -41,20 +46,39 @@ public class ReporteFragment extends Fragment {
     }
 
     private void leerDatos() {
+
+        List<Transaction> transactionList = new ArrayList<>();
+
         DatosSQLite datosSQLite = new DatosSQLite(getActivity());
         Cursor cursor = datosSQLite.mostrarTodo(datosSQLite);
+        Integer count = 0;
         if(cursor != null){
             if(cursor.moveToFirst()){
                 do{
-                    HashMap<String,String> map = new HashMap<>();
-                    map.put("idmmovimiento",cursor.getString(cursor.getColumnIndex("idmovimiento")));
-                    map.put("descripcion",cursor.getString(cursor.getColumnIndex("descripcion")));
-                    map.put("monto",cursor.getString(cursor.getColumnIndex("monto")));
-                    map.put("fecha",cursor.getString(cursor.getColumnIndex("fecha")));
-                    map.put("movimiento",cursor.getString(cursor.getColumnIndex("movimiento")));
-                    arrayList.add(map);
+                    System.out.println(cursor.getString(cursor.getColumnIndex("idmovimiento")));
+                    Transaction transaction = new Transaction();
+                    transaction.setIdmovimiento(cursor.getString(cursor.getColumnIndex("idmovimiento")));
+                    transaction.setDescripcion(cursor.getString(cursor.getColumnIndex("descripcion")));
+                    transaction.setMonto(cursor.getString(cursor.getColumnIndex("monto")));
+                    transaction.setFecha(cursor.getString(cursor.getColumnIndex("fecha")));
+                    transaction.setMovimiento(cursor.getString(cursor.getColumnIndex("movimiento")));
+                    transactionList.add(transaction);
+
+
                 }while(cursor.moveToNext());
             }
         }
+        setTransactionRecycler(transactionList);
+
+    }
+
+
+    private void setTransactionRecycler(List<Transaction> transactionList){
+        Log.e("FOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO", transactionList.toString());
+        transactionRecycler = mlvReporte;
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
+        transactionRecycler.setLayoutManager(layoutManager);
+        transactionAdapter = new TransactionAdapter(getContext(), transactionList);
+        transactionRecycler.setAdapter(transactionAdapter);
     }
 }
