@@ -13,4 +13,9 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/red_design</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="Theme.Restaurant.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Restaurant.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

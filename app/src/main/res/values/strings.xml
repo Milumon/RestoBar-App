@@ -102,4 +102,10 @@
     <string name="mariana">Mariana</string>
     <string name="miluska">Miluska</string>
     <string name="josemaria">Josemaria</string>
+    <string name="title_activity_cash">CashActivity</string>
+    <string name="tab_registro">REGISTRO</string>
+    <string name="tab_reporte">REPORTE</string>
+    <string name="tab_ingreso">INGRESO</string>
+    <string name="tab_gasto">GASTO</string>
+    <string name="nav_caja">nav_caja</string>
 </resources>

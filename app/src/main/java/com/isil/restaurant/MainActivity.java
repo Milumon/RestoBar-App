@@ -156,6 +156,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.nav_listados:
                 mostrarListados();
                 return true;
+            case R.id.nav_caja:
+                mostrarCaja();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -169,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void mostrarNosotros() {    startActivity(new Intent(this, NosotrosActivity.class));    }
 
-/*    private void mostrarSalir() {   startActivity(new Intent(this,LoginActivity.class));    }*/
+    private void mostrarCaja() {   startActivity(new Intent(this,CashActivity.class));    }
 
     private void mostrarRecomendaciones() { startActivity(new Intent(this,RecommendationActivity.class));   }
 
