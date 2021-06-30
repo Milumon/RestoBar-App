@@ -78,7 +78,7 @@ public class RegistroFragment extends Fragment implements View.OnClickListener, 
     private void registrarMov() {
         String descripcion = mtetDescripcion.getText().toString();
         String monto = mtetMonto.getText().toString();
-        Integer movimiento = toggleButton.isChecked() ? -1 : 1;
+        Integer movimiento = toggleButton.isChecked() ? 1 : -1;
         DatosSQLite datosSQLite = new DatosSQLite(getActivity());
         int autonumerico = datosSQLite.registrarMovimiento(datosSQLite, descripcion, Float.parseFloat(monto), movimiento);
         System.out.println("debería ser 1 " + autonumerico);
@@ -94,10 +94,10 @@ public class RegistroFragment extends Fragment implements View.OnClickListener, 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (isChecked) {
-            buttonView.setText("Gasto");
+            buttonView.setText("Ingreso");
             toggleButton.setChecked(true);
         } else {
-            buttonView.setText("Ingreso");
+            buttonView.setText("Gasto");
             toggleButton.setChecked(false);
         }
         Log.v("Switch State=", "" + isChecked);

@@ -62,7 +62,7 @@
         android:fontFamily="@font/proximanovasemibold"
         android:showText="false"
         android:splitTrack="false"
-        android:text="Ingreso"
+        android:text="Gasto"
         android:textAlignment="textStart"
         android:textColor="@color/black_design"
         android:textSize="12sp"
